@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.constants;
+package com.weatherapp.constants;
 
 /**
  * This interface represents all the constants used in the application.
@@ -8,27 +8,27 @@ package com.hireright.weatherapp.constants;
  */
 public interface Constants {
 
-	/** Holds the STATUS constant*/
+	/** Holds the STATUS constant */
 	String STATUS = "STATUS";
 
-	/** Holds the MESSAGE constant*/
+	/** Holds the MESSAGE constant */
 	String MESSAGE = "MESSAGE";
 
-	/** Holds the ERROR constant*/
+	/** Holds the ERROR constant */
 	String ERROR = "ERROR";
 
-	/** Holds the SUCCESS constant*/
+	/** Holds the SUCCESS constant */
 	String SUCCESS = "SUCCESS";
 
-	/** Holds the CONTENT_TYPE constant*/
+	/** Holds the CONTENT_TYPE constant */
 	String CONTENT_TYPE = "application/json";
 
-	/** Holds the CHAR_ENCODING constant*/
+	/** Holds the CHAR_ENCODING constant */
 	String CHAR_ENCODING = "UTF-8";
 
-	/** Holds the CITY_CODE constant*/
+	/** Holds the CITY_CODE constant */
 	String CITY_CODE = "cityCode";
 
-	/** Holds the ZIP_CODE constant*/
+	/** Holds the ZIP_CODE constant */
 	String ZIP_CODE = "zipCode";
 }

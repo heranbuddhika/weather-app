@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.service;
+package com.weatherapp.service;
 
 public interface WeatherService {
 

@@ -1,15 +1,15 @@
-package com.hireright.weatherapp.service;
+package com.weatherapp.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.hireright.weatherapp.constants.Constants;
-import com.hireright.weatherapp.dto.TimeZone;
-import com.hireright.weatherapp.repository.GeoLocationRepository;
-import com.hireright.weatherapp.repository.GeoLocationRepositoryImpl;
-import com.hireright.weatherapp.util.JsonConverter;
+import com.weatherapp.constants.Constants;
+import com.weatherapp.dto.TimeZone;
+import com.weatherapp.repository.GeoLocationRepository;
+import com.weatherapp.repository.GeoLocationRepositoryImpl;
+import com.weatherapp.util.JsonConverter;
 
 /**
  * Implementation class for the <code>GeoLocationService</code>.
@@ -55,6 +55,6 @@ public class GeoLocationServiceImpl implements GeoLocationService {
 			response.put(Constants.MESSAGE, "Zip code: " + zipCode + "is invalid.");
 			logger.error("Zip code: " + zipCode + "is invalid.");
 		}
-        return converter.convertMapToJson(response);
+		return converter.convertMapToJson(response);
 	}
 }

@@ -1,9 +1,9 @@
-package com.hireright.weatherapp.repository;
+package com.weatherapp.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hireright.weatherapp.dto.WeatherSummary;
+import com.weatherapp.dto.WeatherSummary;
 
 /**
  * Implementation class for the <code>WeatherRepository</code>.
@@ -16,7 +16,10 @@ public class WeatherRepositoryImpl implements WeatherRepository {
 	/** Holds a list of <code>WeatherSummary</code> objects. */
 	static List<WeatherSummary> weatherSummaries;
 
-	/** Initializing a set of <code>WeatherSummary</code> objects for testing purpose. */
+	/**
+	 * Initializing a set of <code>WeatherSummary</code> objects for testing
+	 * purpose.
+	 */
 	static {
 		weatherSummaries = new ArrayList<>();
 		weatherSummaries.add(new WeatherSummary("Colombo", "CMB", 28.5));
@@ -29,7 +32,7 @@ public class WeatherRepositoryImpl implements WeatherRepository {
 	 */
 	@Override
 	public WeatherSummary findWeatherSummary(String cityCode) {
-		return WeatherRepositoryImpl.weatherSummaries.stream()
-			.filter(summary -> cityCode.equals(summary.getCityCode())).findFirst().orElse(null);
+		return WeatherRepositoryImpl.weatherSummaries.stream().filter(summary -> cityCode.equals(summary.getCityCode()))
+				.findFirst().orElse(null);
 	}
 }

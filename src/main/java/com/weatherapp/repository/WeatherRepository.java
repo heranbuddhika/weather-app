@@ -1,6 +1,6 @@
-package com.hireright.weatherapp.repository;
+package com.weatherapp.repository;
 
-import com.hireright.weatherapp.dto.WeatherSummary;
+import com.weatherapp.dto.WeatherSummary;
 
 /**
  * Interface for the weather summary repository.
@@ -11,7 +11,8 @@ import com.hireright.weatherapp.dto.WeatherSummary;
 public interface WeatherRepository {
 
 	/**
-	 * This method returns a weather summary object which matches the given city code.
+	 * This method returns a weather summary object which matches the given city
+	 * code.
 	 * 
 	 * @param cityCode
 	 * @return returns a <code>WeatherSummary</code> object.

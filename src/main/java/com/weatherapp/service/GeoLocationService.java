@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.service;
+package com.weatherapp.service;
 
 import java.util.Map;
 
@@ -11,7 +11,8 @@ import java.util.Map;
 public interface GeoLocationService {
 
 	/**
-	 * This method returns a response as a string with matching <code>TimeZone</code> object.
+	 * This method returns a response as a string with matching
+	 * <code>TimeZone</code> object.
 	 * 
 	 * @param request
 	 * @return response string

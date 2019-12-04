@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.util;
+package com.weatherapp.util;
 
 import java.util.Map;
 

@@ -1,6 +1,6 @@
-package com.hireright.weatherapp.repository;
+package com.weatherapp.repository;
 
-import com.hireright.weatherapp.dto.TimeZone;
+import com.weatherapp.dto.TimeZone;
 
 /**
  * Interface for the geo location repository.

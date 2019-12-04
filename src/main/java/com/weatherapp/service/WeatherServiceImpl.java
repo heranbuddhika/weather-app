@@ -1,15 +1,15 @@
-package com.hireright.weatherapp.service;
+package com.weatherapp.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.hireright.weatherapp.constants.Constants;
-import com.hireright.weatherapp.dto.WeatherSummary;
-import com.hireright.weatherapp.repository.WeatherRepository;
-import com.hireright.weatherapp.repository.WeatherRepositoryImpl;
-import com.hireright.weatherapp.util.JsonConverter;
+import com.weatherapp.constants.Constants;
+import com.weatherapp.dto.WeatherSummary;
+import com.weatherapp.repository.WeatherRepository;
+import com.weatherapp.repository.WeatherRepositoryImpl;
+import com.weatherapp.util.JsonConverter;
 
 /**
  * Implementation class for the <code>WeatherService</code>.
@@ -54,6 +54,6 @@ public class WeatherServiceImpl implements WeatherService {
 			response.put(Constants.MESSAGE, "City code: " + cityCode + "is invalid.");
 			logger.error("City code: " + cityCode + "is invalid.");
 		}
-        return converter.convertMapToJson(response);
+		return converter.convertMapToJson(response);
 	}
 }

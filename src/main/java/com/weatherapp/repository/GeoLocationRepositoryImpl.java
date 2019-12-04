@@ -1,9 +1,9 @@
-package com.hireright.weatherapp.repository;
+package com.weatherapp.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.hireright.weatherapp.dto.TimeZone;
+import com.weatherapp.dto.TimeZone;
 
 /**
  * Implementation class for the <code>GeoLocationRepository</code>.
@@ -29,7 +29,7 @@ public class GeoLocationRepositoryImpl implements GeoLocationRepository {
 	 */
 	@Override
 	public TimeZone findTimeZone(String zipCode) {
-		return GeoLocationRepositoryImpl.timeZones.stream()
-			.filter(timeZone -> zipCode.equals(timeZone.getZipCode())).findFirst().orElse(null);
+		return GeoLocationRepositoryImpl.timeZones.stream().filter(timeZone -> zipCode.equals(timeZone.getZipCode()))
+				.findFirst().orElse(null);
 	}
 }

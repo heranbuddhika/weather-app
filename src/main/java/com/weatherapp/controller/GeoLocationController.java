@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.controller;
+package com.weatherapp.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.hireright.weatherapp.constants.Constants;
-import com.hireright.weatherapp.service.GeoLocationService;
-import com.hireright.weatherapp.service.GeoLocationServiceImpl;
-import com.hireright.weatherapp.util.JsonConverter;
+import com.weatherapp.constants.Constants;
+import com.weatherapp.service.GeoLocationService;
+import com.weatherapp.service.GeoLocationServiceImpl;
+import com.weatherapp.util.JsonConverter;
 
 /**
  * This is the controller class for geo location related services.
@@ -49,8 +49,8 @@ public class GeoLocationController extends HttpServlet {
 		res.setContentType(Constants.CONTENT_TYPE);
 		res.setCharacterEncoding(Constants.CHAR_ENCODING);
 		printWriter.print(geoLocationService.getTimeZone(requestConvert(req)));
-        printWriter.flush();
-        logger.info("End of the geo-service doPost()");
+		printWriter.flush();
+		logger.info("End of the geo-service doPost()");
 	}
 
 	/**
@@ -61,9 +61,7 @@ public class GeoLocationController extends HttpServlet {
 	 * @throws IOException
 	 */
 	private Map<String, String> requestConvert(HttpServletRequest req) throws IOException {
-		String jsonString = req.getReader()
-				.lines()
-				.collect(Collectors.joining(System.lineSeparator()));
+		String jsonString = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
 
 		return converter.convertJsonToMap(jsonString);
 	}

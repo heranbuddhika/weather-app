@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.dto;
+package com.weatherapp.dto;
 
 /**
  * Time Zone DTO.

@@ -1,4 +1,4 @@
-package com.hireright.weatherapp.controller;
+package com.weatherapp.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.hireright.weatherapp.constants.Constants;
-import com.hireright.weatherapp.service.WeatherService;
-import com.hireright.weatherapp.service.WeatherServiceImpl;
+import com.weatherapp.constants.Constants;
+import com.weatherapp.service.WeatherService;
+import com.weatherapp.service.WeatherServiceImpl;
 
 @WebServlet("/weather-service")
 public class WeatherController extends HttpServlet {
@@ -37,7 +37,7 @@ public class WeatherController extends HttpServlet {
 		res.setContentType(Constants.CONTENT_TYPE);
 		res.setCharacterEncoding(Constants.CHAR_ENCODING);
 		printWriter.print(weatherService.getWeatherSummary(req.getParameter(Constants.CITY_CODE)));
-        printWriter.flush();
-        logger.info("Start of the weather-service doPost()");
+		printWriter.flush();
+		logger.info("Start of the weather-service doPost()");
 	}
 }
